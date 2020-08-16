@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Teko', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+/* Navigation */
+.nav-scroller a{
+    font-size: 36px;
+}
+main {
+  background-image: url(../img/5.JPG);
+  background-size: cover;
+  height: 800px;
+}
+
+@media (min-width: 1440px) {
+  .card-text {
+    width: 70%!important;
+  }
+}
+@media (max-width: 768px) {
+  .card-text {
+    width: 40%!important;
+  }
+}
+
+@media (max-width: 640px) {
+  main {
+   height: 500px;
+  }
+  main img {
+     width: 100%;
+   }
+  footer {
+    text-align: center;
+  }
+  .social {
+    text-align: center!important;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 425px) {
+  .card-text {
+    width: 70%!important;
+  }
+}
+@media (max-width: 375px) {
+  nav a{
+    font-size: 27px!important;
+  }
+  .card-text {
+    width: 60%!important;
+  }
+}
+@media (max-width: 320px) {
+  main {
+    height: 400px;
+   }
+   nav a{
+    font-size: 20px!important;
+  }
+  .text-white h1 {
+    font-size: 33px;
+  }
+  .card-text {
+    width: 50%!important;
+  }
+  .but {
+    padding: 0!important;
+  }
+}
+
+/* Card group */
+.card-img-overlay {
+    background-color: rgba(52, 58, 64, 0.8);
+    color: white;
+    letter-spacing: 0.6px;
+}
+.card-img-overlay:hover {
+    background-color: transparent;
+    color: rgb(52, 58, 64);
+}
+.card-img-overlay i {
+    transition: transform 600ms ease;
+    animation: color 3s infinite;
+}
+.card-img-overlay i:hover {
+    cursor: pointer;
+    transform: translateY(0) translateX(10px);
+}
+.card-text {
+  width: 70%;
+}
+
+/**
+ * Material Modal CSS
+ */
+.modal {
+  margin-top: 40px;
+  will-change: visibility, opacity;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 500px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-transition-delay: $modal-delay;
+          transition-delay: $modal-delay;
+}
+ .modal--active {
+  visibility: visible;
+  opacity: 1;
+}
+.modal--align-top {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.modal__dialog {
+  max-width: 90%;
+}
+.modal__content {
+  will-change: transform, opacity;
+  position: relative;
+  color: #3b3b3b;
+  padding: 1rem;
+  background-clip: padding-box;
+  opacity: 0;
+  -webkit-transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.25s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.modal__content--active {
+  opacity: 1;
+}
+.modal__close {
+  z-index: 1100;
+  cursor: pointer;
+}
+.modal__trigger {
+  position: relative;
+  display: inline-block;
+  color: white;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26);
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+#modal__temp {
+  will-change: transform, opacity;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: none;
+          transform: none;
+  opacity: 1;
+  -webkit-transition: opacity 0.1s ease-out, -webkit-transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: opacity 0.1s ease-out, -webkit-transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: opacity 0.1s ease-out, transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: opacity 0.1s ease-out, transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+/**
+ * Demo specific CSS
+ */
+
+.hangar {
+  float: left;
+  width: 45%;
+  margin-top: 20px;
+}
+img {
+  max-width: 100%;
+}
+.demo-btns .link {
+  font-size: 20px;
+}
+.demo-btns .modal__trigger {
+  margin-right: 3px;
+}
+@media (max-width: 640px) {
+  .demo-btns .modal__trigger {
+    margin-bottom: 0.8rem;
+  }
+}
+.demo-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: -1rem;
+  padding: 0.6rem;
+  background: rgba(0,0,0,0.3);
+  border-radius: 50%;
+  -webkit-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.demo-close svg {
+  width: 24px;
+  fill: #fff;
+  pointer-events: none;
+  vertical-align: top;
+}
+.demo-close:hover {
+  background: rgba(0,0,0,0.6);
+}
+
+@media (max-width: 425px) {
+  .carousel {
+    width: 100%;
+    margin-top: 150px;
+  }
+  .modal__close {
+    right: 42%;
+    margin-top: 90px;
+    margin-bottom: 20px;
+  }
+  .modal {
+    height: 650px;
+    padding: 0;
+  }
+  .modal .jumbotron {
+    padding: 0!important;
+  }
+}
+
+/* Contact form */
+
+#contact {
+    letter-spacing: 1.6px;
+}
+#contact button {
+    width: 200px;
+    letter-spacing: 2.6px;
+    font-family: 'Teko', sans-serif;
+}
+
+/* Footer */
+footer .container {
+        background: #fff;
+        /* border: 2px solid #e2e6e9; */
+        /* border-radius: 15px 15px 0 0; */
+        height: 160px;
+        margin-top: 30px;
+}
+
+footer .up-btn,
+footer .social div {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 20%;
+  background: #eee;
+  border: 1px solid silver;
+  cursor: pointer;
+  color: #3b3b3b;
+  transition: transform 600ms ease;
+}
+
+footer .up-btn:hover,
+footer .social div:hover {
+  transform: translateY(-10px);
+  color: rgb(0, 124, 251);
+}
+
+footer .social div {
+  display: inline-block;
+  margin-left: 15px;
+}
+.social p {
+  margin-top: 20%;
+  margin-bottom: 0;
+}
+.f-text {
+  line-height: 1.8em;
+}
+footer img {
+  width: 60%;
+}
+
+
+  /* SLIDER */
+
+.carousel-inner img {
+  width: 100%;
+  height: auto;
+}
+.carousel-item {
+
+}
